@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+  <div class="container mt-5">
+  
+  <h3>Registration Form</h3>
+    {% for message in messages%}
+    <div class="alert-danger">
+      <p>{{message}}</p>
+    </div>
+    {% endfor %}
+    <form action="register" method="post">
+      {% csrf_token %}
+      <input type="text" name="firstname" placeholder="First Name" class="form-control col-md-6 mt-1">
+      <input type="text" name="lastname" placeholder="Last Name" class="form-control col-md-6 mt-1">
+      <input type="text" name="username" placeholder="Username" class="form-control col-md-6 mt-1">
+      <input type="email" name="email" placeholder="Email" class="form-control col-md-6 mt-1">
+      <input type="password" name="password1" placeholder="Password" class="form-control col-md-6 mt-1">
+      <input type="password" name="password2" placeholder="Confirm password" class="form-control col-md-6 mt-1">
+      <input type="submit" vlaue="Submit" class="btn btn-success mt-2">
+    </form>
+
+  </div> <!-- /container -->
+
+{% endblock content %}

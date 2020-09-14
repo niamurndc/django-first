@@ -1,0 +1,13 @@
+.blue-bg{
+  background-color: blue;
+  color: aliceblue;
+}
+
+.logo{
+  height: 200px;
+  width: 200px;
+}
+
+.j-text, .heading{
+  color: #000;
+}
